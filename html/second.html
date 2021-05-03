@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/first.css">
+    <script src="../js/first/first.js"></script>
+    <script src="../js/first/firstDraw.js?n=1"></script>
+    <title>firstLab</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="sp"></div>
+        <div class="icon"></div>
+        <div class="title"></div>
+        <div class="win-btn btn-close">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="sp"></div>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li class="item" data-action="sm-open" data-isaction="false">2 - Использование растровых изображений для сокрытия информации
+          </li>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="form_toggle">
+        	<div class="form_toggle-item item-1">
+        		<input id="fid-1" type="radio" name="radio" value="encrypt" onclick="drawHtmlTemplate(this)" checked >
+        		<label for="fid-1">Encrypt</label>
+        	</div>
+        	<div class="form_toggle-item item-2">
+        		<input id="fid-2" type="radio" name="radio" value="decrypt" onclick="drawHtmlTemplate(this)">
+        		<label for="fid-2">Decrypt</label>
+        	</div>
+        </div>
+      </div>
+
+      <div class="main" id="main">
+        <label class="main-label">Выберите ваш файл контейнер</label><br>
+        <input type="file" id="containerFile"  onchange="fileChange('containerFile')"><br><br>
+        <label class="main-label">Выберите ваш секретный файл</label><br>
+        <input type="file" id="messageFile"  onchange="fileChange('messageFile')"><br><br>
+        <button class="button28" onclick="encrypt()">Encrypt</button>
+      </div>
+    </div>
+  </body>
+</html>
