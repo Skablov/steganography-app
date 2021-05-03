@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/first.css">
-    <script src="../js/first/first.js"></script>
-    <script src="../js/first/firstDraw.js?n=1"></script>
+    <script src="../js/second/second.js"></script>
+    <script src="../js/second/secondDraw.js?n=1"></script>
     <title>firstLab</title>
   </head>
   <body>
@@ -44,9 +44,9 @@
 
       <div class="main" id="main">
         <label class="main-label">Выберите ваш файл контейнер</label><br>
-        <input type="file" id="containerFile"  onchange="fileChange('containerFile')"><br><br>
+        <input type="file" id="containerFile"  onchange="fileChange(this)"><br><br>
         <label class="main-label">Выберите ваш секретный файл</label><br>
-        <input type="file" id="messageFile"  onchange="fileChange('messageFile')"><br><br>
+        <input type="file" id="messageFile"  onchange="fileChange(this)"><br><br>
         <button class="button28" onclick="encrypt()">Encrypt</button>
       </div>
     </div>
