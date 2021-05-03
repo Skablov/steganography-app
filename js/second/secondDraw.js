@@ -37,7 +37,6 @@ function fileChange(e) {
         alert('User error: \n Невозможно загрузить ключ отличный от формата key');
     } else {
         fileObject[e.id] = file.files[0];
-        console.log(fileObject);
     }
     return;
 }
