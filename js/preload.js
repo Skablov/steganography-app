@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ipcRenderer.send('loadWindow', 'first');
   });
 
+  second.addEventListener('click', () => {
+    ipcRenderer.send('loadWindow', 'second');
+  });
+
   btnMin.addEventListener('click', () => {
     ipcRenderer.send('minimize', `${document.title}`);
   });

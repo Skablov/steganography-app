@@ -1,6 +1,6 @@
 const fs = require('fs');
 const reader = require('any-text');
-require('../js/firstDraw.js');
+require('./firstDraw.js');
 document.addEventListener('DOMContentLoaded', () => {
   console.log('1234');
   console.log(fileObject);

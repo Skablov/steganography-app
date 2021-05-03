@@ -30,7 +30,7 @@ createWindow = () => {
           height: 600,
           webPreferences: {
             devTools: true,
-            preload: path.join(__dirname, '/js/preloadForFirst.js'),
+            preload: path.join(__dirname, '/js/preloadFor/preloadForFirst.js'),
             nodeIntegration: true,
             contextIsolation: false,
           },
@@ -38,6 +38,21 @@ createWindow = () => {
           frame: false
         });
         firstLab.loadFile(path.join(__dirname, '/html/first.html'));
+      break;
+      case 'second':
+        const secondLab = new BrowserWindow({
+          width: 800,
+          height: 600,
+          webPreferences: {
+            devTools: true,
+            preload: path.join(__dirname, '/js/preloadFor/preloadForSecond.js'),
+            nodeIntegration: true,
+            contextIsolation: false,
+          },
+          icon: __dirname + "/img/icon.png",
+          frame: false
+        });
+        secondLab.loadFile(path.join(__dirname, '/html/second.html'));
       break;
     };
   });
