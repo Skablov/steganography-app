@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #121212;
+  color: #cccccc;
+}
+
+div.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+div.header {
+  display: grid;
+  grid-template-columns: 10px 40px 1fr 50px 10px;
+  height: 40px;
+  background-color: #212121;
+}
+
+div.header > div.title {
+  -webkit-app-region: drag;
+}
+
+div.win-btn {
+  line-height: 40px;
+  text-align: center;
+  font-size: 12px;
+  transition: all .3s ease-in-out;
+}
+
+div.win-btn:hover {
+  background-color: #333333;
+  transition: all .3s ease-in-out;
+}
+
+div.win-btn:active {
+  background-color: #121212;
+  transition: all .3s ease-in-out;
+}
+
+div.menu {
+  height: 30px;
+  background-color: #333333;
+}
+
+div.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+div.menu > ul {
+  display: flex;
+}
+
+div.menu > ul > li > ul {
+  position: absolute;
+  display: none;
+  left: 0;
+}
+
+li {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #333333;
+  user-select: none;
+  cursor: default;
+  height: 30px;
+  line-height: 30px;
+  transition: all .3s else-in-out;
+}
+
+li:hover {
+  background-color: #555555;
+  transition: all .3s else-in-out;
+}
+
+div.container {
+  margin-left: 10px;
+}
+
+div.form-check {
+  margin-top: 20px;
+}
+
+
+
+.form_toggle {
+	display: inline-block;
+	overflow: hidden;
+  margin-top: 10px;
+}
+.form_toggle-item {
+	float: left;
+	display: inline-block;
+}
+.form_toggle-item input[type=radio] {
+	display: none;
+}
+.form_toggle-item label {
+	display: inline-block;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-right: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+.form_toggle .item-1 label {
+	border-radius: 6px 0 0 6px;
+}
+.form_toggle .item-2 label {
+	border-radius: 0 6px 6px 0;
+	border-right: 1px solid #999;
+}
+
+/* Checked */
+.form_toggle .item-1 input[type=radio]:checked + label {
+	background: #ffc5c5;
+  color: black;
+}
+.form_toggle .item-2 input[type=radio]:checked + label {
+	background: #bbffbb;
+  color: black;
+}
+
+.main {
+  padding-left: 50px;
+  margin-top: 10px;
+}
+
+div.main > input {
+  padding-top: 10px;
+}
+
+div.main > span {
+  font-size: 85%;
+  color: #FFF0F5;
+  font-style: italic;
+}
+
+.button28 {
+  position: relative;
+  display: inline-block;
+  font-size: 90%;
+  font-weight: 700;
+  color: rgb(209,209,217);
+  text-decoration: none;
+  text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+  padding: .5em 1em;
+  outline: none;
+  border-radius: 3px;
+  background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
+  box-shadow:
+   0 1px rgba(255,255,255,.2) inset,
+   0 3px 5px rgba(0,1,6,.5),
+   0 0 1px 1px rgba(0,1,6,.2);
+  transition: .2s ease-in-out;
+}
+.button28:hover:not(:active) {
+  background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
+}
+.button28:active {
+  top: 1px;
+  background: linear-gradient(rgb(76,77,82), rgb(56,57,62)) rgb(76,77,82);
+  box-shadow:
+   0 0 1px rgba(0,0,0,.5) inset,
+   0 2px 3px rgba(0,0,0,.5) inset,
+   0 1px 1px rgba(255,255,255,.1);
+}
