@@ -2,6 +2,7 @@ const path = require('path'); // модуль для работы с разли�
 const url = require('url'); // модуль для отслеживания различных адрессов внутри проекта
 const {app, BrowserWindow, ipcMain, Menu} = require('electron');
 require('./cwnd.js');
+const db = require('./db');
 
 app.whenReady().then(() => {
   createWindow();
