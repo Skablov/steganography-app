@@ -7,15 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnMax = document.querySelector('.btn-max');
   const btnMin = document.querySelector('.btn-min');
   const iconBtnMax = btnMax.children[0];
-  const first = document.querySelector('#first');
+  // const first = document.querySelector('#first');
 
-  first.addEventListener('click', () => {
-    ipcRenderer.send('loadWindow', 'first');
-  });
+  // first.addEventListener('click', () => {
+  //   ipcRenderer.send('loadWindow', 'first');
+  // });
 
-  second.addEventListener('click', () => {
-    ipcRenderer.send('loadWindow', 'second');
-  });
+  // second.addEventListener('click', () => {
+  //   ipcRenderer.send('loadWindow', 'second');
+  // });
 
   btnMin.addEventListener('click', () => {
     ipcRenderer.send('minimize', `${document.title}`);

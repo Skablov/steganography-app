@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/but.css">
     <link rel="stylesheet" href="../css/clock.css">
     <script src="../js/index.js"></script>
     </head>
@@ -17,38 +18,25 @@
         <div class="icon"></div>
         <div class="title"></div>
         <div class="win-btn btn-min">
-          <i class="fa fa-window-minimize"></i>
+        <i class="fa fa-window-minimize"></i>
         </div>
         <div class="win-btn btn-max">
-          <i class="fa fa-window-maximize"></i>
+        <i class="fa fa-window-maximize"></i>
         </div>
         <div class="win-btn btn-close">
-          <i class="fa fa-times"></i>
+        <i class="fa fa-times"></i>
         </div>
         <div class="sp"></div>
       </div>
 
-      <div class="menu">
-        <ul>
-          <li class="item" data-action="sm-open" data-isaction="false">Лабораторные
-            <ul>
-              <li class="sub-item" id="first">1. Использование скрытых каналов по памяти</li>
-              <li class="sub-item" id="second">2. Использование растровых изображений для сокрытия информации</li>
-            </ul>
-          </li>
-        </ul>
+      <div class="auth">
+        <h1>Sign in</h1>
+        <label>Login</label> <br>
+        <input type="text" placeholder="enter your login" id="login"> <br>
+        <label">Password</label> <br>
+        <input type="text" placeholder="enter your password" id="password"> <br> 
+        <button class="button28" onclick="">Enter</button>
       </div>
-
-      <div class="clock">
-        <ul>
-          <li id="hours">00</li>
-          <li id="separator">:</li>
-          <li id="minutes">00</li>
-          <li id="separator">:</li>
-          <li id="seconds">00</li>
-        </ul>
-      </div>
-
     </div>
   </body>
 </html>

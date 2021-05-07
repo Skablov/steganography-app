@@ -27,7 +27,7 @@ div.header {
   background-color: #212121;
 }
 
-div.header > div.title {
+div.header>div.title {
   -webkit-app-region: drag;
 }
 
@@ -59,11 +59,11 @@ div.menu ul {
   margin: 0;
 }
 
-div.menu > ul {
+div.menu>ul {
   display: flex;
 }
 
-div.menu > ul > li > ul {
+div.menu>ul>li>ul {
   position: absolute;
   display: none;
   left: 0;
@@ -84,3 +84,4 @@ li:hover {
   background-color: #555555;
   transition: all .3s else-in-out;
 }
+

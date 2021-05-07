@@ -1,18 +1,18 @@
 console.log("index.js is loaded!");
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  setInterval(function() {
-    // Seconds
-    var seconds = new Date().getSeconds();
-    document.getElementById("seconds").innerHTML = (seconds < 10 ? '0' : '') + seconds;
+// document.addEventListener('DOMContentLoaded', () => {
+//   setInterval(function() {
+//     // Seconds
+//     var seconds = new Date().getSeconds();
+//     document.getElementById("seconds").innerHTML = (seconds < 10 ? '0' : '') + seconds;
 
-    // Minutes
-    var minutes = new Date().getMinutes();
-    document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes;
+//     // Minutes
+//     var minutes = new Date().getMinutes();
+//     document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes;
 
-    // Hours
-    var hours = new Date().getHours();
-    document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
-  }, 1000);
-});
+//     // Hours
+//     var hours = new Date().getHours();
+//     document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
+//   }, 1000);
+// });
