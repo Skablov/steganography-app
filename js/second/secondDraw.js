@@ -2,7 +2,8 @@ const encryptHtml = `<label class="main-label">Выберите ваш файл 
 <input type="file" id="containerFile"  onchange="fileChange(this)"><br><br>
 <label class="main-label">Выберите ваш секретный файл</label><br>
 <input type="file" id="messageFile"  onchange="fileChange(this)"><br><br>
-<button class="button28" onclick="encrypt()">Encrypt</button>`;
+<button class="button28" onclick="encrypt()">Encrypt</button>
+<button class="button28" onclick="encrypt(true)">Show insertion point</button>`;
 
 const decryptHtml = `<label class="main-label">Выберите ваш стегоконтейнер</label><br>
 <input type="file" id="stegoContainerFile"  onchange="fileChange(this)"><br><br>
@@ -18,7 +19,7 @@ const fileObject = {
     keyFile: null
 }
 
-function drawHtmlTemplate (e) {
+function drawHtmlTemplate(e) {
     console.log(e.value);
     e.value == 'encrypt' ? document.getElementById('main').innerHTML = encryptHtml : document.getElementById('main').innerHTML = decryptHtml;
     for (atr in fileObject) {
@@ -28,15 +29,20 @@ function drawHtmlTemplate (e) {
 }
 
 function fileChange(e) {
-    const file = document.getElementById(e.id);
-    console.log(file);
-    if (( e.id == 'containerFile' || e.id == 'stegoContainerFile' ) && file.files[0].name.split('.').pop() != 'bmp') {
-        alert('User error: \n Невозможно загрузить контейнер отличный от формата bmp!');
-        file.value = "";
-    } else if (e.id == 'keyFile' && file.files[0].name.split('.').pop() != 'key') {
-        alert('User error: \n Невозможно загрузить ключ отличный от формата key');
-    } else {
-        fileObject[e.id] = file.files[0];
+    try {
+        const file = document.getElementById(e.id);
+        console.log(file);
+        if ((e.id == 'containerFile' || e.id == 'stegoContainerFile') && file.files[0].name.split('.').pop() != 'bmp') {
+            file.value = "";
+            throw new Error('Container has an unsupported format');
+        } else if (e.id == 'keyFile' && file.files[0].name.split('.').pop() != 'key') {
+            throw new Error('Key has an unsupported format');
+        } else {
+            fileObject[e.id] = file.files[0];
+        }
+        return;
+    } catch (err) {
+        errorHandler(fs, err);
     }
-    return;
+
 }
