@@ -15,7 +15,13 @@ createWindow = () => {
   win.loadFile(path.join(__dirname, '/html/index.html'));
 
   ipcMain.on('closeWindow', (event, arg) => {
-    win.close();
+    switch (arg) {
+      case 'mainPage':
+        mainPage.close();
+      break;
+      default:
+        win.close();
+    }
   });
 
   ipcMain.on('minimize', (event, arg) => {
@@ -53,6 +59,21 @@ createWindow = () => {
           frame: false
         });
         secondLab.loadFile(path.join(__dirname, '/html/second.html'));
+      break;
+      case 'main':
+        const mainPage = new BrowserWindow({
+          width: 1000,
+          height: 600,
+          webPreferences: {
+            devTools: true,
+            preload: path.join(__dirname, '/js/preloadFor/preloadForMain.js'),
+            nodeIntegration: true,
+            contextIsolation: false,
+          },
+          icon: __dirname + "/img/icon.png",
+          frame: false
+        });
+        mainPage.loadFile(path.join(__dirname, '/html/main.html'));
       break;
     };
   });

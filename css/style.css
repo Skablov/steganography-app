@@ -85,3 +85,16 @@ li:hover {
   transition: all .3s else-in-out;
 }
 
+.auth {
+  display: grid;
+  grid-template-areas: "l r";
+  grid-template-rows: 1fr 1fr;
+}
+.login {
+  grid-area: l;
+  margin-left: 100px;
+}
+.register {
+  grid-area: r;
+  margin-left: 100px;
+}
