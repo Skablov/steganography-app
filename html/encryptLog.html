@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/first.css">
     <link rel="stylesheet" href="../css/encryptLog.css">
+    <script src="../js/errorHandler/errorHandler.js"></script>
     <script src="../js/encryptLog/draw.js"></script>
     <script src="../js/encryptLog/encryptLog.js"></script>
     <title>EncryptLog</title>
@@ -45,16 +46,18 @@
       <div class="diffiLog">
         <div class="encr">
             <label class="main-label">Выберите лог файл, который необходимо подписать</label><br>
-            <input type="file" id="containerFile"  onchange="fileChange('containerFile')"><br><br>
+            <input type="file" id="logFile"  onchange="fileChange('logFile')"><br><br>
             <label class="main-label">Выберите ваш секретный ключ</label><br>
-            <input type="file" id="messageFile"  onchange="fileChange('messageFile')"><br><br>
+            <input type="file" id="secretKey"  onchange="fileChange('secretKey')"><br><br>
             <button class="button28" onclick="encrypt()">Подписать</button>
           </div>
           <div class="decr">
             <label class="main-label">Выберите лог файл, подпись которого нужно проверить</label><br>
-            <input type="file" id="containerFile"  onchange="fileChange('containerFile')"><br><br>
+            <input type="file" id="checkLog"  onchange="fileChange('checkLog')"><br><br>
             <label class="main-label">Введите публичный ключ</label><br>
-            <input type="file" id="messageFile"  onchange="fileChange('messageFile')"><br><br>
+            <input type="file" id="publicKey"  onchange="fileChange('publicKey')"><br><br>
+            <label class="main-label">Введите подпись файла</label><br>
+            <input type="file" id="signature"  onchange="fileChange('signature')"><br><br>
             <button class="button28" onclick="decrypt()">Проверить</button>
           </div>
       </div>

@@ -12,15 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const iconBtnMax = btnMax.children[0];
   const btnLogin = document.querySelector('#loginUser');
   const btnReg = document.querySelector('#registerUser');
-  // const first = document.querySelector('#first');
 
-  // document.querySelector('#first').addEventListener('click', () => {
-  //   ipcRenderer.send('loadWindow', 'first');
-  // });
-
-  // second.addEventListener('click', () => {
-  //   ipcRenderer.send('loadWindow', 'second');
-  // });
   btnReg.addEventListener('click', () => {
     try {
       const login = document.getElementById('regLogin').value;
@@ -68,6 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (auth) {
         alert('You have successfully authorization!');
         ipcRenderer.send('loadWindow', 'main');
+      } else {
+        alert('Incorrect login or password!');
       }
     } catch (err) {
       alert(err);
