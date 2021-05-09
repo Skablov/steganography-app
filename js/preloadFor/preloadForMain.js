@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#second').addEventListener('click', () => {
       ipcRenderer.send('loadWindow', 'second');
     });
+    document.querySelector('#encryptLog').addEventListener('click', () => {
+      ipcRenderer.send('loadWindow', 'encryptLog');
+    })
   
     btnMin.addEventListener('click', () => {
       ipcRenderer.send('minimize', `${document.title}`);

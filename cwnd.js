@@ -75,6 +75,21 @@ createWindow = () => {
         });
         mainPage.loadFile(path.join(__dirname, '/html/main.html'));
       break;
+      case 'encryptLog':
+        const encryptLogPage = new BrowserWindow({
+          width: 800,
+          height: 600,
+          webPreferences: {
+            devTools: true,
+            preload: path.join(__dirname, '/js/preloadFor/preloadForEncryptLog.js'),
+            nodeIntegration: true,
+            contextIsolation: false,
+          },
+          icon: __dirname + '/img/icon.png',
+          frame: false
+        });
+        encryptLogPage.loadFile(path.join(__dirname, '/html/encryptLog.html'));
+      break;
     };
   });
 }

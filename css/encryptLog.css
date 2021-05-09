@@ -1,0 +1,19 @@
+.encr {
+    display: block;
+    padding-left: 50px;
+    margin-top: 10px;
+}
+  
+div.encr > input {
+    padding-top: 10px;
+}
+
+.decr {
+    display: none;
+    padding-left: 50px;
+    margin-top: 10px;
+}
+
+div.decr > input {
+    padding-top: 10px;
+}
