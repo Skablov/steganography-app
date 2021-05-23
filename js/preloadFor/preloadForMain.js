@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ipcRenderer.send('loadWindow', 'encryptLog');
     })
   
+    document.querySelector('#kohaZhao').addEventListener('click', () => {
+      ipcRenderer.send('loadWindow', 'kohaZhao');
+    })
+
     btnMin.addEventListener('click', () => {
       ipcRenderer.send('minimize', `${document.title}`);
     });

@@ -90,6 +90,21 @@ createWindow = () => {
         });
         encryptLogPage.loadFile(path.join(__dirname, '/html/encryptLog.html'));
       break;
+      case 'kohaZhao':
+        const kohaZhaoPage = new BrowserWindow({
+          width: 800,
+          height: 600,
+          webPreferences: {
+            devTools: true,
+            preload: path.join(__dirname, '/js/preloadFor/preloadForKohaZhao.js'),
+            nodeIntegration: true,
+            contextIsolation: false,
+          },
+          icon: __dirname + '/img/icon.png',
+          frame: false
+        });
+        kohaZhaoPage.loadFile(path.join(__dirname, '/html/kohaZhao.html'));
+      break;
     };
   });
 }
