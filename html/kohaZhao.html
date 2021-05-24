@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../css/first.css">
     <link rel="stylesheet" href="../css/encryptLog.css">
     <script src="../js/errorHandler/errorHandler.js"></script>
-    <script src="../js/second/second.js"></script>
-    <script src="../js/second/secondDraw.js"></script>
+    <script src="../js/kohaZhao/draw.js"></script>
+    <script src="../js/kohaZhao/kohaZhao.js"></script>
     <title>firstLab</title>
   </head>
   <body>
@@ -51,10 +51,10 @@
           </div>
           <div class="decr">
             <label class="main-label">Выберите ваш стегоконтейнер</label><br>
-            <input type="file" id="stegoContainer"  onchange="fileChange('checkLog')"><br><br>
+            <input type="file" id="stegoContainer"  onchange="fileChange('stegoContainer')"><br><br>
             <label class="main-label">Введите ключ</label><br>
-            <input type="text" id="secretKey"  onchange="fileChange('publicKey')"><br><br>
-            <button class="button28" onclick="decrypt()">Проверить</button>
+            <input type="text" id="secretKey"><br><br>
+            <button class="button28" onclick="decrypt()">Извлечь</button>
           </div>
       </div>
 
