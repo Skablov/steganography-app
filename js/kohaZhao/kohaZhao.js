@@ -187,7 +187,7 @@ const encrypt = () => {
             if (secretMessage.length == 0)
                 throw new Error("'Secret message' field is not filled!");
 
-            let binaryMessage = translateStringToBinaryString(secretMessage);
+            let binaryMessage = translateStringToBinaryString(secretMessage); // лежите строка бит 10101011010101010
             let arrYCr = getCr(bitMapArray, binaryMessage.length);
             let arrCr2d = create2dArrayAndInversely(arrYCr, true) // двумерный массив красной компоненты
 
